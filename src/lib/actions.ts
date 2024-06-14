@@ -1,5 +1,8 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+
 import { db } from "./db";
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
@@ -56,5 +59,19 @@ export const registerUser = async (prevState: any, queryData: FormData) => {
 
   console.log(user);
 
+  revalidatePath("/login");
+  redirect("/login");
+
   return validationResult.message;
+};
+
+export const loginUser = async (prevState: any, queryData: FormData) => {
+  const email = queryData.get("email") as string;
+  const password = queryData.get("password") as string;
+  console.log("Email:", email, "Password:", password);
+
+  const validationResult = validateInputs(email, password);
+  console.log(validationResult);
+
+  return;
 };

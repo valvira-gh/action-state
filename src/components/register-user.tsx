@@ -20,7 +20,7 @@ const RegisterUserForm = () => {
 
   return (
     <form action={formAction}>
-      <div className="flex flex-col my-1">
+      <div className="flex flex-col mt-1">
         <Label className="my-1" htmlFor="email">
           Email
         </Label>
@@ -52,24 +52,4 @@ const RegisterUserForm = () => {
   );
 };
 
-const RegisterComponent = () => {
-  return (
-    <Card className="m-10">
-      <CardHeader>
-        <CardTitle>Register User</CardTitle>
-        <CardDescription>Provide an email address</CardDescription>
-      </CardHeader>
-
-      <CardContent>
-        <RegisterUserForm />
-      </CardContent>
-      <CardFooter>
-        <p className="text-sm text-gray-500 text-center">
-          We handle your data with care.
-        </p>
-      </CardFooter>
-    </Card>
-  );
-};
-
-export default RegisterComponent;
+export default RegisterUserForm;
