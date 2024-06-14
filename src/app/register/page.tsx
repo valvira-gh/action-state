@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import RegisterUserForm from "@/components/register-user";
+import RegisterUserForm from "@/components/register-form";
 import Link from "next/link";
 
 import {

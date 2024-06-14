@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { loginUser } from "@/lib/actions";
+import { loginUser } from "@/app/data/loginUser";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,14 +12,14 @@ const LoginForm = () => {
 
   return (
     <form action={formAction} className="w-[90%]">
-      <div className="flex flex-col my-1">
+      <div className="flex flex-col my-2">
         <Label className="my-1" htmlFor="email">
           Email
         </Label>
         <Input type="text" name="email" />
       </div>
-      <div className="flex flex-col my-1">
-        <Label className="my-1" htmlFor="password">
+      <div className="flex flex-col my-2 space-y-1">
+        <Label className="" htmlFor="password">
           Password
         </Label>
         <Input type="password" name="password" />

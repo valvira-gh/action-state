@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { registerUser } from "@/lib/actions";
+import { registerUser } from "@/app/data/registerUser";
 
 import {
   Card,

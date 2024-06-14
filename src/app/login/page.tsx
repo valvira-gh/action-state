@@ -1,6 +1,5 @@
 "use client";
 
-import { useActionState } from "react";
 import LoginForm from "@/components/login-form";
 import Link from "next/link";
 
@@ -10,7 +9,6 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter,
 } from "@/components/ui/card";
 
 const LoginPage: React.FC = () => {
